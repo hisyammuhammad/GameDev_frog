@@ -1,0 +1,109 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Menu.gd" type="Script" id=1]
+[ext_resource path="res://Asset/Background/wp3522994.jpg" type="Texture" id=2]
+[ext_resource path="res://tmblpopup.tres" type="StyleBox" id=3]
+[ext_resource path="res://asset/Folks-Normal.ttf" type="DynamicFontData" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 25
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=3]
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=4]
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=5]
+font_data = ExtResource( 4 )
+
+[node name="Menu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -36.0
+margin_top = 36.0
+margin_right = 668.0
+margin_bottom = 396.0
+rect_scale = Vector2( 0.352, 0.331 )
+script = ExtResource( 1 )
+
+[node name="Wp3522994" type="Sprite" parent="."]
+position = Vector2( 562.5, 259.819 )
+scale = Vector2( 0.473481, 0.672156 )
+texture = ExtResource( 2 )
+
+[node name="Button4" type="Button" parent="."]
+margin_left = 159.0
+margin_top = 556.0
+margin_right = 250.0
+margin_bottom = 585.0
+custom_fonts/font = SubResource( 1 )
+custom_styles/hover = ExtResource( 3 )
+custom_styles/pressed = ExtResource( 3 )
+custom_styles/focus = ExtResource( 3 )
+custom_styles/disabled = ExtResource( 3 )
+custom_styles/normal = ExtResource( 3 )
+text = "Back"
+
+[node name="Label" type="Label" parent="."]
+anchor_left = 0.095
+anchor_right = 0.095
+anchor_bottom = 0.094
+margin_left = 371.72
+margin_top = 39.0
+margin_right = 449.72
+margin_bottom = 1.6
+rect_scale = Vector2( 1.612, 1.743 )
+custom_fonts/font = SubResource( 2 )
+text = "Select Level"
+
+[node name="Button" type="Button" parent="."]
+margin_left = 378.0
+margin_top = 106.0
+margin_right = 727.0
+margin_bottom = 146.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 3 )
+custom_styles/hover = ExtResource( 3 )
+custom_styles/pressed = ExtResource( 3 )
+custom_styles/focus = ExtResource( 3 )
+custom_styles/disabled = ExtResource( 3 )
+custom_styles/normal = ExtResource( 3 )
+text = "Level 1"
+
+[node name="Button2" type="Button" parent="."]
+margin_left = 377.841
+margin_top = 166.163
+margin_right = 726.841
+margin_bottom = 203.163
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 4 )
+custom_styles/hover = ExtResource( 3 )
+custom_styles/pressed = ExtResource( 3 )
+custom_styles/focus = ExtResource( 3 )
+custom_styles/disabled = ExtResource( 3 )
+custom_styles/normal = ExtResource( 3 )
+text = "Level 2"
+
+[node name="Button3" type="Button" parent="."]
+margin_left = 378.0
+margin_top = 227.0
+margin_right = 727.0
+margin_bottom = 266.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 5 )
+custom_styles/hover = ExtResource( 3 )
+custom_styles/pressed = ExtResource( 3 )
+custom_styles/focus = ExtResource( 3 )
+custom_styles/disabled = ExtResource( 3 )
+custom_styles/normal = ExtResource( 3 )
+text = "Level 3"
+
+[connection signal="pressed" from="Button4" to="." method="_on_Button4_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_Button2_pressed"]
+[connection signal="pressed" from="Button3" to="." method="_on_Button3_pressed"]
